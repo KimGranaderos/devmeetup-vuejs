@@ -6,13 +6,13 @@
           <v-card-title>
             <h3 class="primary--text">{{ meetup.title }}</h3>
           </v-card-title>
-          <v-card-media
+          <v-img
             :src="meetup.imageUrl"
             height="400px"
-          ></v-card-media>
+          ></v-img>
           <v-card-text>
-            <div class="info--text">{{ meetup.date }} - Where it takes place</div>
-            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</div>
+            <div class="info--text">{{ meetup.date | date }} - {{ meetup.location }}</div>
+            <div>{{ meetup.description }}</div>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
